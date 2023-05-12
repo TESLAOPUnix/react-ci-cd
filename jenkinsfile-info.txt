@@ -1,0 +1,3 @@
+the jenkinsfile is for building a reactjs app 
+but to see if its working or not make sure to install apcahe2 in ubuntu or httpd in centos 
+and also give it sudoers nopasswd in /etc/sudoers file and then you host it and see later i may add docker config also in this project
