@@ -37,7 +37,7 @@ function App() {
 let toggleMode = (cls) => {
   removeCls();
     document.body.classList.add('bg-'+cls)
-    if(mode == 'light'){
+    if(mode === 'light'){
         document.body.style.backgroundColor = 'grey';
         document.body.style.color = 'white';
         setmode('dark');
