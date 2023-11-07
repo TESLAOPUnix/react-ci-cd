@@ -1,6 +1,11 @@
 pipeline
 {
     agent any
+    
+    environment {
+		DOCKERHUB_CREDENTIALS=credentials('dockerhub')
+	}
+	
     stages
     {
         stage('fetch code')
@@ -17,20 +22,25 @@ pipeline
                 sh 'npm install'
             }
         }
-        stage('build')
-        {
-            steps
-            {
-                sh 'npm run build'
-            }
+        stage('docker login') {
+            steps {
+				sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+			}
         }
-         stage('host')
-        {
-            steps
-            {
-                sh 'sudo cp -r ${WORKSPACE}/build/* /var/www/html/'
+        stage('build image') {
+            steps {
+                script {
+                    def tag = env.BUILD_NUMBER
+                    sh "docker build -t teslaopunix/react-ci-cd:$tag ."
+                    sh "docker push teslaopunix/react-ci-cd:$tag"
+                   
+                }
             }
-        }
+        }   
     }
-        
+     post {
+		always {
+			sh 'docker logout'
+		}
+	}
 }
