@@ -1,0 +1,355 @@
+
+
+@media screen and (max-width: 848px) {
+    .navBar-links {
+        display: none;
+    }
+
+    #menu {
+        display: block !important;
+    }
+
+    #menu {
+        font-size: 1.5rem;
+    }
+    
+    .hero-img {
+        display: none;
+        flex-basis: 0%;
+    }
+
+    .heroText {
+        flex-basis: 100%;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .heroText-2 > h1, .heroText-2 > h3 {
+        text-align: center;
+    }
+
+    .span1 {
+        display: block;
+    }
+
+    .span2 {
+        display: inline;
+    }
+
+    .heroText-Download {
+        padding: 12px 36px ;
+     }
+    
+    .fa-brands {
+     font-size: 1.8rem ;
+     }
+    
+    .download-Text > p {
+         font-size: 0.8rem ;
+     }
+
+    .download-Text > h1 {
+         font-size: 1.2rem ;
+     }
+
+     .feature3 > h1 {
+        font-size: 1.5rem;
+    }
+    
+
+     .faqsection {
+        padding-top: 5rem;
+     }
+
+     .faqcontainer {
+        width: 28rem;
+     }
+
+     .faqcontainer > div {
+        width: 28rem;
+     }
+
+     footer {
+        margin: 3rem 0;
+        padding-inline: var(--padding-inline);
+        justify-content: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+    }
+    
+    footer > div {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    footer > div > h3 {
+        color: var(--secondary-color);
+    }
+    
+    .footer-download {
+        justify-content: flex-end;
+    }
+
+  }
+
+  @media screen and (min-device-width: 848px) and (max-device-width: 964px) {
+   .navBar {
+    font-size: 0.8rem;
+   }
+
+   .heroText-Download {
+    padding: 8px 24px;
+   }
+
+   .fa-brands {
+    font-size: 1rem;
+    }
+
+    .download-Text > p {
+        font-size: 0.5rem;
+    }
+    
+    .download-Text > h1 {
+        font-size: 0.8rem;
+    }
+
+    .primary-btn {
+        padding: 0.5rem 1rem;
+    }
+
+    .heroText {
+        flex-basis: 60%;
+    }
+
+    .hero-img {
+        flex-basis: 40%;
+    }
+
+    .hero-img > img {
+        width: 15rem;
+        height: auto;
+        margin-top: 4rem;
+        margin-right: 2rem;
+    }
+
+    .feature3 > h1 {
+        font-size: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 1280px) {
+    :root{
+        --padding-inline: 8%;
+    }
+
+    .feature-container {
+        padding: 3rem 3rem;
+    }
+
+    .feature1-sub, .feature2-sub {
+        flex-grow: 1;
+    }
+
+    .feature-container > div {
+        justify-content: space-evenly;
+        gap: 2rem;
+    }
+  }
+
+  @media screen and (max-width: 588px){
+
+    .heroText-Download {
+        padding: 8px 24px;
+       }
+    
+       .fa-brands {
+        font-size: 1rem ;
+        }
+    
+        .download-Text > p {
+            font-size: 0.5rem ;
+        }
+        
+        .download-Text > h1 {
+            font-size: 0.8rem ;
+        }
+    
+        .primary-btn {
+            padding: 0.5rem 1rem;
+        }
+
+        .faqsection {
+            padding-top: 5rem ;
+        }
+
+        .faqsection > div > h1 {
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+    
+         .faqcontainer {
+            width: 100% !important; 
+         }
+
+         .faqcontainer > div {
+            width: 100% !important;
+            padding: 0.5rem 0rem;
+         }
+
+         .faqcontainer > div > p {
+            font-size: 0.8rem ;
+         }
+
+         .faqcontainer > p {
+            width: 100%;
+            font-size: 0.8rem ;
+         }
+
+         .feature3 {
+            margin-top: 4rem;
+         }
+
+         .feature3 > h1 {
+            font-size: 1.2rem;
+            height: 0.2rem;
+            padding-top: 3rem;
+            z-index: 70;
+         }
+
+         .feature3 > img {
+            width: 100%;
+         }
+
+         .feature-container {
+            padding: 1.5rem 1.5rem;
+            gap: 1rem;
+        }
+
+        .feature-container > h1 {
+            margin: 1rem;
+            font-size: 2rem;
+        }
+
+        .heroText {
+            padding-top: 6rem;
+        }
+
+        .feature1-sub {
+            height: 16rem;
+        }
+
+        .faqbox {
+            gap: 1rem;
+        }
+
+        .faqbox > h3 {
+            font-size: 1rem;
+        }
+
+
+        
+}
+
+@media screen and (max-width: 480px){
+    :root{
+        --padding-inline: 4%;
+    }
+
+    .heroText-2 > h1 {
+        font-size: 4rem;
+    }
+
+    .heroText-2 > h3 {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .feature1-sub {
+        gap: 1rem;
+        height: 16rem;
+    }
+
+    .feature1-sub > h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature1-sub > p {
+        font-size: 1rem;
+    }
+
+    .feature2-sub > div > h2 {
+        font-size: 1.5rem;
+    }
+
+    .feature2-sub > div > p {
+        font-size: 1rem;
+    }
+
+    .feature2-text {
+        gap: 0.8rem;
+    }
+
+    .feature3 > h1 {
+        width: 80%;
+    }
+
+    .span3 {
+        display: inline;
+    }
+
+
+
+}
+
+  @media screen and (max-width: 1390px) {
+    .faq-img > img {
+        width: 500px;
+        height: auto;
+    }
+
+    .faqbox > h3 {
+        z-index: 80;
+    }
+  }
+
+  @media screen and (max-width: 1269px) {
+    .faq-img > img {
+        margin-top: 2rem;
+        width: 400px;
+        height: 447.02px;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .faq-img > img {
+        display: none;
+    }
+
+    .faqsection { 
+        padding-inline: var(--padding-inline);
+    }
+
+    .faqsection1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .faqbox > h3 {
+        padding-left: 0rem;
+    }
+
+    .faqsection1 {
+        flex-basis: 100%;
+    }
+
+    .faqbox > h3 {
+        text-align: center;
+    }
+
+    .faq-img {
+        flex-basis: 0%;
+    }
+  }

@@ -1,0 +1,559 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&family=Raleway:wght@100;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+:root{
+    --primary-color: #17172C;
+    --secondary-color: #A38DFF;
+    --text-color: #ffffff;
+    --padding-inline: 16%;
+}
+
+body {
+    background-color: var(--primary-color);
+    font-family: 'Nunito', sans-serif;
+    /*font-family: 'Raleway', sans-serif;*/
+    color: var(--text-color);
+    overflow-x: hidden;
+    
+}
+
+a:hover, a:active {
+    transform: scale(1.05);
+    color: var(--secondary-color);
+    transform-origin: center;
+    
+}  
+
+@keyframes bounce-1 {
+    0%   { transform: translateY(0) rotate(3deg) scale(1.05); }
+    50%  { transform: translateY(-50px) rotate(6deg) scale(1); }
+    100% { transform: translateY(0) rotate(3deg) scale(1.05); }
+}
+
+@keyframes bounce-2 {
+    0%   { transform: translateY(0) rotate(0deg) translateX(0); }
+    50%  { transform: translateY(-100px) rotate(90deg) translateX(100px); }
+    100% { transform: translateY(0) rotate(0deg) translateX(); }
+}
+
+.primary-btn {
+    outline: var(--text-color) solid 1px;
+    padding: 1rem 2rem;
+    border-radius: 40px;
+    transition: all 0.2s linear;
+    transform-origin: 50% 50%;
+    flex-grow: 0;
+}
+
+.primary-btn:hover, .primary-btn:active {
+    background-color: var(--text-color);
+    color: var(--primary-color); 
+}
+
+.heroText-Download:hover, .heroText-Download:active {
+    background-color: var(--text-color);
+    color: var(--primary-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.2s ease;
+}
+
+.container {
+    display: flex;
+}
+
+.feature-container {
+    margin-top: 10rem;
+    margin-inline: var(--padding-inline);
+    border: var(--text-color) solid 1px;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.10);
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 0;
+    gap: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-container > h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.feature-container > div {
+    justify-content: space-evenly;
+}
+
+/* NavBar Starts */
+
+.navBar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-inline: var(--padding-inline);
+    background-color: #17172c94;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 100;
+    z-index: 100;
+    backdrop-filter: blur(0.8rem);
+    transition: top 0.3s ease;
+
+}
+
+.navBar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navBar-links {
+    width: 64%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.navBar-mobile-links {
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto;
+    top: 5rem;
+    background: rgba(23, 23, 44, 0.9);
+    backdrop-filter: blur(0.8rem);
+    border-radius: 15px;
+    padding: 1rem;
+    width: 80%;
+    gap: 1rem;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: var(--text-color) solid 1px;
+    display: none;
+}
+
+.show {
+    display: inline-flex;
+}
+
+/* NavBar Ends */
+
+/* Hero Starts */
+
+.span1 {
+    display: block;
+}
+
+.heroSection {
+    padding-inline: var(--padding-inline);
+    margin: 5.5rem 0;
+}
+
+.heroText {
+    flex-direction: column;
+    width: 50%;
+    padding-top: 9rem;
+    gap: 1.5rem;
+}
+
+.heroText-1 {
+    width: 8rem;
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    position: relative;
+    text-align: center;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: all 0.3s;
+    border: 1px solid var(--text-color);
+    background: linear-gradient(to right, rgba(163, 141, 255, 0.1) 1%, transparent 40%,transparent 60% , rgba(163, 141, 255, 0.1) 100%);
+    color: var(--text-color);
+    
+  }
+  
+  .heroText-1:hover, .heroText-1:active {
+    color: var(--text-color);
+  }
+  
+.heroText-1:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .5s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(163, 141, 255, 0.3) 40%,rgba(163, 141, 255, 0.3) 60% , transparent 100%);
+  }
+  
+.heroText-1:hover:before {
+    transform: translateX(15em);
+  }
+
+  .heroText-1:active:before {
+    transform: translateX(15em);
+  }
+
+.heroText-2 > h1 {
+    font-size: 5rem;
+    font-weight: 800;
+}
+
+.heroText-2 > h3 {
+    line-height: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.heroText-Download {
+    outline: var(--text-color) solid 1px;
+    border-radius: 40px;
+    padding: 16px 32px;
+    gap: 16px;
+    align-items: center;
+}
+
+.fa-brands {
+    font-size: 1.5rem;
+}
+
+.download-Text > p {
+    font-size: 0.6rem;
+}
+
+.download-Text > h1 {
+    font-size: 1rem;
+}
+
+.hero-img {
+    width: 50%;
+    position: relative;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.hero-img > img {
+    width: 18rem;
+    margin-top: 3.5rem;
+    margin-right: 2rem;
+    animation: bounce-1 infinite ease 6s;
+}
+
+.hero-img > div {
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    filter: blur(90px);
+    animation: bounce-2 infinite ease 8s;
+    z-index: -1;
+}
+
+.bubble-1 {
+    width: 10rem;
+    height: 10rem;
+   
+    left: 10rem;
+    top: 20rem;
+}
+
+.bubble-2 {
+    width: 15rem;
+    height: 15rem;
+    
+    right: 1rem;
+    top: 10rem;
+}
+
+/* Hero Ends */
+
+/* Feature 1 Starts */
+
+.feature-container > div {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3rem 0;
+}
+
+.feature1-sub {
+    border: var(--text-color) solid 1px;
+    border-radius: 40px;
+    background: var(--primary-color);
+    width: 14.75rem;
+    height: 19rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+    gap: 2rem;
+}
+
+.feature1-sub > div > h2 {
+    font-size: 2rem;
+}
+
+.feature1-sub > div > p {
+    font-family: 'Raleway', sans-serif;
+}
+
+
+.feature1-sub > div {
+    flex-direction: column;
+    gap: 0.5rem;
+    height: 8.125rem;
+}
+
+.featurebub {
+    position: absolute;
+    background-color: var(--secondary-color);
+    color: var(--secondary-color);
+    border-radius: 50px;
+    z-index: -1;
+    
+}
+
+.bubble-3 {
+    width: 200px;
+    height: 200px;
+    filter: blur(90px);
+    right: -5rem;
+    top: -1rem;
+}
+
+.bubble-4 {
+    width: 157px;
+    height: 157px;
+    filter: blur(90px);
+    left: 8rem;
+    bottom: -1rem;
+}
+
+/* Feature 1 Ends */
+
+/* Feature 2 Starts */
+
+.feature2 > div {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 3rem 0;
+}
+
+.feature2-img {
+    width: 50px;
+    height: 50px; 
+    background-color: #ffffff;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature2-sub {
+    border: var(--text-color) solid 1px;
+    border-radius: 40px;
+    background: var(--primary-color);
+    width: 25.5rem;
+    height: 15.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem 2.25rem;
+    gap: 1rem;
+}
+
+.feature2-sub > div > h2 {
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+.feature2-sub > div > p {
+   font-family: 'Raleway', sans-serif;
+}
+
+.feature2-text {
+    flex-direction: column;
+    gap: 1rem;
+    height: 8.125rem;
+}
+
+.bubble-5 {
+    width: 157px;
+    height: 157px;
+    filter: blur(90px);
+    left: -5rem;
+    top: -1rem;
+}
+
+.bubble-6 {
+    width: 397px;
+    height: 397px;
+    filter: blur(90px);
+    right: -20rem;
+    top: 8rem;
+}
+
+.bubble-7 {
+    width: 157px;
+    height: 157px;
+    filter: blur(90px);
+    left: 10rem;
+    bottom: -1rem;
+}
+
+/* Feature 2 Ends */
+
+/* Feature 3 Starts */
+
+.feature3 {
+    flex-direction: column;
+    margin-top: 10rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature3 > h1 {
+    font-size: 2.5rem;
+}
+
+.feature3 > img {
+    margin-top: 7rem;
+    width: 90%;
+}
+
+.span3 {
+    display: block;
+}
+/* Feature 3 Ends */
+
+/* FAQs Starts */
+
+.faqsection {
+    width: 100%;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    padding-inline-start: var(--padding-inline);
+    background-color: #644EB2;
+}
+
+.faqsection1 {
+    flex-basis: 70%;
+}
+
+.faqbox {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.faqbox > h3 {
+    padding-left: 1.5rem;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.faqcontainer {
+    background-color: var(--primary-color);
+    width: 35rem;
+    height: auto;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+    flex-direction: column;
+}
+
+.faqcontainer > div > i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.faqcontainer > div {
+    width: 35rem;
+    border-radius: 20px;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Raleway', sans-serif;
+}
+
+.info {
+    display: none;
+}
+
+.in {
+    display: block;
+}
+
+.faqsection > div > h1 {
+    padding-left: 1.5rem;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.faq-img {
+    flex-basis: 30%;
+}
+
+.faq-img > img {
+    width: 600px;
+    height: auto;
+    justify-content: end;
+    z-index: 50;
+    filter: drop-shadow(4px 4px 100px rgba(0, 0, 0, 0.582));
+}
+
+
+/* FAQs Ends */
+
+.wave-img {
+    width: 100%;
+    margin-top: -12rem;
+}
+
+/* Footer Starts */
+
+footer {
+    margin: 5rem 0;
+    padding-inline: var(--padding-inline);
+    justify-content: space-between;
+}
+
+footer > div {
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+footer > div > h3 {
+    color: var(--secondary-color);
+}
+
+.footer-download {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
